@@ -1,0 +1,41 @@
+@import 'src/assets/css/variables.scss';
+
+.image-upload {
+    display: grid;
+    width: 100%;
+    max-width: 500px;
+    grid-template-rows: 250px 50px;
+    padding: $spacing-unit;
+    border-radius: 5px;
+
+    &--preview {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        p {
+            color: $font-color-sub;
+            font-size: 0.9em;
+            margin-top: $spacing-unit;
+            text-align: center;
+        }
+    }
+
+    &--actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: $spacing-unit;
+
+        &_end >Button{
+            margin-left: $spacing-unit;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import 'src/assets/css/variables.scss';
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    max-width: 700px;
+    height: auto;
+    z-index: 100;
+    border: 1px solid $color-middle-light;
+    border-radius: 5px;
+    background-color: $color-background-main;
+    display: grid;
+    grid-template-rows: 50px auto;
+    min-height: 200px;
+    row-gap: 10px;
+
+    &.image-modal {
+        width: 90%;
+        max-width: 800px;
+    }
+
+    @media screen and (max-width: $min-app-width) {
+        top: auto;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        min-width: 400px;
+        transform: none;
+
+        &.image-modal {
+            width: 100%;
+            max-width: 700px;
+        }
+    }
+
+    &--header {
+        display: grid;
+        grid-template-columns: auto 40px;
+        align-items: center;
+        padding: 0px 12px;
+        border-bottom: 1px solid $color-middle-light;
+
+        &_title {
+            font-size: 1.6em;
+            color: $font-color-base;
+            max-width: 500px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @media screen and (max-width: $min-app-width) {
+                max-width: 350px;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import 'src/assets/css/variables.scss';
+
+.create-prediction {
+    display: grid;
+    grid-template-rows: auto 40px;
+    row-gap: 10px;
+    padding: 10px;
+
+    &--form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        grid-template-rows: none;
+        width: 100%;
+
+        @media screen and (max-width: $min-app-width) {
+            grid-template-columns: none;
+            grid-template-rows: auto auto;
+            row-gap: 10px;
+        }
+
+        &--image {
+            justify-self: center;
+            img {
+                max-width: 300px;
+                max-height: 300px;
+            }
+        }
+
+        &--inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &--actions {
+        display: flex;
+        justify-content: space-between;
+    }
+}

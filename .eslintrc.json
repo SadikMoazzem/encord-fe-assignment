@@ -1,0 +1,58 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx"]
+            }
+        }   
+    },
+    "globals": {
+        "cy": true
+    },
+    "rules": {
+        "@typescript-eslint/no-namespace": "off",
+        "max-len": ["warn", { "code": 260 }],
+        "no-console": "off",
+        "import/no-unresolved": "off",
+        "indent": ["warn", 4],
+        "react/jsx-indent": ["warn", 4],
+        "react/jsx-indent-props": ["warn", 4],
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": ["off"],
+        "react/prop-types": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "react/function-component-definition":  [2, { "namedComponents": "arrow-function" }],
+        "react/jsx-filename-extension": [1, {
+            "extensions": [".tsx", ".ts"]
+        }],
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "react-hooks/exhaustive-deps": ["off"], // Needs to be addressed
+        "react/require-default-props": ["off"],
+        "jsx-a11y/tabindex-no-positive": ["off"],
+        "jsx-a11y/no-static-element-interactions": ["off"],
+        "no-nested-ternary": ["off"]
+    }
+}

@@ -1,0 +1,53 @@
+@import 'src/assets/css/variables.scss';
+
+.images-panel {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+
+    @media screen and (max-width: $min-app-width) {
+        flex-direction: column-reverse;
+    }
+
+    &--actions {
+        width: 100%;
+        height: 60px;
+        background-color: $color-middle;
+        border-bottom: 1px solid $color-middle-light;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 $spacing-unit;
+
+
+        @media screen and (max-width: $min-app-width) {
+            border-bottom: none;
+            border-top: 1px solid $color-middle-light;
+        }
+    }
+
+    &--view {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        padding: $spacing-unit;
+
+        &--status {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $spacing-unit * 4;
+
+            > img {
+                width: 300px;
+            }
+
+        }
+    }
+}

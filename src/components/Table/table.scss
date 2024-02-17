@@ -1,0 +1,12 @@
+@import 'src/assets/css/variables.scss';
+
+// TODO - move to style overrides
+.MuiTable-root {
+    .MuiTableCell-root {
+        @media screen and (max-width: $min-app-width) {
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
